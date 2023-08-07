@@ -1,6 +1,7 @@
 ## 設定
 
 ```
-$ npm install
-$ npm run start
+$ npm i -g yarn
+$ yarn install
+$ yarn start
 ```
