@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant="h6">フレームワーク</Typography>
-              <Typography color="textSecondary">Vue / React</Typography>
+              <Typography color="textSecondary">Vue / Vuetify / React</Typography>
             </CardContent>
           </Card>
         </Box>
@@ -41,7 +41,7 @@ const Skills: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant="h6">データベース</Typography>
-              <Typography color="textSecondary">Oracle / MySQL / PostgreSQL</Typography>
+              <Typography color="textSecondary">Oracle / MySQL / PostgreSQL / DynamoDB</Typography>
             </CardContent>
           </Card>
         </Box>
