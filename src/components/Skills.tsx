@@ -25,15 +25,7 @@ const Skills: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant="h6">言語</Typography>
-              <Typography color="textSecondary">JavaScript / TypeScript / HTML</Typography>
-            </CardContent>
-          </Card>
-        </Box>
-        <Box display="flex" justifyContent="center" p={1}>
-          <Card className={classes.root}>
-            <CardContent>
-              <Typography variant="h6">CSS</Typography>
-              <Typography color="textSecondary">SCSS / Bootstrap</Typography>
+              <Typography color="textSecondary">JavaScript / TypeScript / HTML / CSS / SCSS / Bootstrap</Typography>
             </CardContent>
           </Card>
         </Box>
