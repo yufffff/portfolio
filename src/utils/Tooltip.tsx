@@ -1,8 +1,9 @@
-import { memo, useRef } from 'react';
+import { ReactNode, memo, useRef } from 'react';
 
 // ツールチップ内に表示するためのprops
 type Props = {
   tooltipText: string;
+  children: ReactNode;
 };
 
 // ツールチップ

@@ -9,7 +9,7 @@ import ScrollUp from './utils/ScrollUp';
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className="bg-[#fcdce0]">
       <section>
         <Navbar />
       </section>
@@ -29,7 +29,7 @@ const App: React.FC = () => {
         <Contact />
       </section>
       <ScrollUp />
-    </>
+    </div>
   );
 };
 
