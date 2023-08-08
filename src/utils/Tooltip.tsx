@@ -1,15 +1,15 @@
-import { ReactNode, memo, useRef } from 'react';
+import React from 'react';
 
 // ツールチップ内に表示するためのprops
 type Props = {
   tooltipText: string;
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 // ツールチップ
-export const Tooltip: React.FC<Props> = memo((props) => {
+export const Tooltip: React.FC<Props> = React.memo((props) => {
   // ツールチップの文言自体のためのref
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
 
   // マウスが乗ったらツールチップを表示
   const handleMouseEnter = () => {
