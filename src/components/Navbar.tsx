@@ -1,10 +1,10 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
+import {FC} from 'react'
+import { Link } from 'react-scroll';
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Button from '@mui/material/Button'
 
-const Navbar: React.FC = () => {
+const Navbar: FC = () => {
   return (
     <>
       <AppBar
@@ -13,38 +13,26 @@ const Navbar: React.FC = () => {
         style={{ alignItems: 'center'}}
       >
         <Toolbar>
-          <AnchorLink href='#about' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
-            <Button>
+          <Link to='about' smooth='true'>
+            <Button color='inherit'>
               ABOUT
             </Button>
-          </AnchorLink>
-          <AnchorLink href='#skills' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
+          </Link>
+          <Link to='skills' smooth='true'>
             <Button color='inherit'>
               SKILLS
             </Button>
-          </AnchorLink>
-          <AnchorLink href='#works' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
+          </Link>
+          <Link to='works' smooth='true'>
             <Button color='inherit'>
               Works
             </Button>
-          </AnchorLink>
-          <AnchorLink href='#contact' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
+          </Link>
+          <Link to='contact' smooth='true'>
             <Button color='inherit'>
             CONTACT
             </Button>
-          </AnchorLink>
+          </Link>
         </Toolbar>
       </AppBar>
     </>

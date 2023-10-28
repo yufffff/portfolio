@@ -1,29 +1,24 @@
-import React from 'react';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
+import { FC } from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
+import ListItem, { ListItemProps } from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import { Folder } from '@mui/icons-material';
 
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import FolderIcon from '@material-ui/icons/Folder';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
+const StyledList = styled(List)(() => ({
     width: 770,
     maxWidth: '100%',
-  },
-}));
+}))
 
 function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
   return <ListItem button component="a" {...props} />;
 }
 
-const Works: React.FC = () => {
-  const classes = useStyles();
-
+const Works: FC = () => {
   return (
     <>
       <Box p={2}>
@@ -31,12 +26,12 @@ const Works: React.FC = () => {
           <Typography variant="h5">Works</Typography>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <List className={classes.root}>
+          <StyledList>
             <ListItem>
               <ListItemLink href="https://yufffff.github.io/task_manager">
                 <ListItemAvatar>
                   <Avatar>
-                    <FolderIcon />
+                    <Folder />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
@@ -65,7 +60,7 @@ const Works: React.FC = () => {
                 <ListItemText primary='Work3' secondary='Work3です。' />
               </ListItemLink>
             </ListItem> */}
-          </List>
+          </StyledList>
         </Box>
       </Box>
     </>

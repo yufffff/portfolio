@@ -1,20 +1,16 @@
-import React from 'react';
-import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import { FC } from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    width: 730,
-    maxWidth: '100%',
-  },
-});
+const StyledCard = styled(Card)(({ theme }) => ({
+  width: 730,
+  maxWidth: '100%',
+}))
 
-const Skills: React.FC = () => {
-  const classes = useStyles();
-
+const Skills: FC = () => {
   return (
     <>
       <Box p={2}>
@@ -22,36 +18,36 @@ const Skills: React.FC = () => {
           <Typography variant="h5">Skills</Typography>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <Card className={classes.root}>
+          <StyledCard>
             <CardContent>
               <Typography variant="h6">言語</Typography>
               <Typography color="textSecondary">JavaScript / TypeScript / HTML / CSS / SCSS / Bootstrap</Typography>
             </CardContent>
-          </Card>
+          </StyledCard>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <Card className={classes.root}>
+          <StyledCard>
             <CardContent>
               <Typography variant="h6">フレームワーク</Typography>
               <Typography color="textSecondary">Vue / Vuetify / React</Typography>
             </CardContent>
-          </Card>
+          </StyledCard>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <Card className={classes.root}>
+          <StyledCard>
             <CardContent>
               <Typography variant="h6">データベース</Typography>
               <Typography color="textSecondary">Oracle / MySQL / PostgreSQL / DynamoDB</Typography>
             </CardContent>
-          </Card>
+          </StyledCard>
         </Box>
         <Box display="flex" justifyContent="center" p={1}>
-          <Card className={classes.root}>
+          <StyledCard>
             <CardContent>
               <Typography variant="h6">クラウド</Typography>
               <Typography color="textSecondary">AWS / GCP</Typography>
             </CardContent>
-          </Card>
+          </StyledCard>
         </Box>
       </Box>
     </>
